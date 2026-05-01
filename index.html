@@ -15,8 +15,7 @@
     .nav,.container,.hero-inner,.footer-inner { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:16px 0; }
     .brand { display:flex; align-items:center; gap:16px; font-weight:900; }
-    .brand-mark { width:188px; height:130px; display:block; object-fit:contain; border-radius:8px; filter:drop-shadow(0 10px 22px rgba(124,58,237,.28)); }
-    .brand-name { display:none; }
+    .brand-name { display:inline-block; font-size:22px; color:var(--text); letter-spacing:0; white-space:nowrap; }
     .nav-links { display:flex; gap:22px; color:var(--muted); font-size:14px; }
     .nav-links a { text-decoration:none; }
     .nav-links a:hover { color:var(--text); }
@@ -38,18 +37,13 @@
     .section-heading h2,.area-panel h2 { margin:0; font-size:clamp(30px,4vw,46px); line-height:1.08; letter-spacing:0; }
     .section-heading p,.area-panel p,.booking-card p,.fine-print { color:var(--muted); }
     .grid-4,.pricing-grid,.steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-    .included-grid,.faq-grid,.service-gallery,.split { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .included-grid,.faq-grid,.split { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
     .card,.price-card,.included-card,.faq-item,.booking-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:22px; box-shadow:0 18px 38px rgba(0,0,0,.18); }
     .card strong,.included-card strong,.faq-item summary { display:block; color:var(--text); font-size:17px; font-weight:900; line-height:1.25; }
     .card span,.included-card span,.faq-item p,.price-card p,.price-card li { color:var(--muted); }
     .icon,.check-icon { width:38px; height:38px; display:grid; place-items:center; margin-bottom:14px; border-radius:8px; background:rgba(124,58,237,.18); color:#d9c5ff; font-weight:900; }
     .check-icon { width:34px; height:34px; margin:0; background:rgba(66,184,131,.16); color:var(--green); }
     .included-card { display:grid; grid-template-columns:42px 1fr; gap:14px; align-items:start; }
-    .service-photo { min-height:560px; overflow:hidden; position:relative; padding:0; background:#07080a; }
-    .service-photo img { width:100%; height:100%; display:block; object-fit:cover; }
-    .service-caption { position:absolute; left:18px; right:18px; bottom:18px; padding:16px; border-radius:8px; background:rgba(10,10,14,.82); border:1px solid var(--line); backdrop-filter:blur(10px); }
-    .service-caption strong,.service-caption span { display:block; }
-    .service-caption span { color:var(--muted); margin-top:4px; }
     .price-card { min-height:320px; transition:transform .18s ease,border-color .18s ease,background .18s ease; }
     .price-card:hover { transform:translateY(-4px); border-color:rgba(242,193,78,.56); background:var(--panel2); }
     .price-card.featured { border-color:rgba(242,193,78,.7); }
@@ -75,14 +69,14 @@
     .faq-item p { padding:0 22px 22px; margin:0; }
     .footer { padding:30px 0; color:var(--muted); background:#0b0c0f; font-size:14px; }
     .footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
-    @media (max-width:920px) { .nav-links { display:none; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.service-gallery,.split { grid-template-columns:1fr 1fr; } .hero:before { width:340px; right:-92px; top:160px; opacity:.34; } }
-    @media (max-width:640px) { .nav,.container,.hero-inner,.footer-inner { width:min(100% - 28px,1120px); } .brand-mark { width:118px; height:82px; } .phone-link { min-height:42px; padding:0 13px; font-size:14px; } .hero { min-height:auto; } .hero-inner { padding:82px 0 94px; } .hero-actions { flex-direction:column; align-items:stretch; } .section { padding:58px 0; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.service-gallery,.split { grid-template-columns:1fr; } .service-photo { min-height:420px; } .price-card { min-height:auto; } }
+    @media (max-width:920px) { .nav-links { display:none; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.split { grid-template-columns:1fr 1fr; } .hero:before { width:340px; right:-92px; top:160px; opacity:.34; } }
+    @media (max-width:640px) { .nav,.container,.hero-inner,.footer-inner { width:min(100% - 28px,1120px); } .brand-name { font-size:18px; } .phone-link { min-height:42px; padding:0 13px; font-size:14px; } .hero { min-height:auto; } .hero-inner { padding:82px 0 94px; } .hero-actions { flex-direction:column; align-items:stretch; } .section { padding:58px 0; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.split { grid-template-columns:1fr; } .price-card { min-height:auto; } }
   </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <div class="brand"><img class="brand-mark" src="assets/mobile-oil-man-logo-transparent.png" alt="Mobile Oil Man logo" /><span class="brand-name">Mobile Oil Man</span></div>
+      <div class="brand"><span class="brand-name">Mobile Oil Man</span></div>
       <div class="nav-links"><a href="#packages">Packages</a><a href="#process">How It Works</a><a href="#included">Included</a><a href="#faq">FAQ</a><a href="#area">Service Area</a></div>
       <a class="phone-link" href="tel:6066619949">606-661-9949</a>
     </nav>
@@ -98,7 +92,6 @@
       </div>
     </section>
     <section class="section"><div class="container"><div class="grid-4"><article class="card"><div class="icon">1</div><strong>Save Time</strong><span>We come to you, so your schedule does not revolve around a shop visit.</span></article><article class="card"><div class="icon">$</div><strong>Honest Pricing</strong><span>Simple packages, clear notes, and pricing confirmed before service.</span></article><article class="card"><div class="icon">O</div><strong>Premium Oils</strong><span>Quality full synthetic options for daily drivers, European, and performance vehicles.</span></article><article class="card"><div class="icon">✓</div><strong>Clean Service</strong><span>Professional setup, careful work, and proper cleanup when the job is done.</span></article></div></div></section>
-    <section class="section" aria-label="Mobile oil change service photos"><div class="container"><div class="section-heading"><h2>Real service, right where the vehicle sits.</h2><p>These are actual mobile oil change service photos, from driveway setup to fresh oil going in.</p></div><div class="service-gallery"><figure class="service-photo"><img src="assets/service-oil-fill.png" alt="Fresh oil being poured during a mobile oil change" loading="lazy" /><figcaption class="service-caption"><strong>Fresh oil, careful service</strong><span>Clean setup and quality products for the oil your vehicle needs.</span></figcaption></figure><figure class="service-photo"><img src="assets/FJservices.png" alt="White Toyota FJ Cruiser receiving mobile oil change service in a driveway" loading="lazy" /><figcaption class="service-caption"><strong>Driveway and workplace ready</strong><span>We bring the tools, ramps, and service to your location.</span></figcaption></figure></div></div></section>
     <section class="section" id="packages"><div class="container"><div class="section-heading"><h2>Mobile Oil Change Packages</h2><p>Choose the service that fits your vehicle. Send your year, make, model, and engine size for exact pricing.</p></div><div class="pricing-grid"><article class="price-card featured"><div class="badge">Best Seller</div><p class="price">$99 <small>starting</small></p><h3>Full Synthetic Package</h3><p>Full synthetic motor oil and filter replacement with mobile service included.</p><ul><li>Up to 5 quarts of oil</li><li>Oil filter change</li><li>Home or workplace visit</li></ul></article><article class="price-card"><div class="badge">European</div><p class="price">$129 <small>starting</small></p><h3>European Full Synthetic</h3><p>For vehicles requiring European full synthetic oil standards.</p><ul><li>Mobil 1 or Pennzoil European</li><li>BMW, Audi, Mercedes-Benz, VW</li><li>Up to 5 quarts included</li></ul></article><article class="price-card"><div class="badge">Premium</div><p class="price">$159+ <small>options</small></p><h3>Premium Synthetic</h3><p>For performance, high-mileage, and specialty oil preferences.</p><ul><li>LIQUI MOLY option: $159</li><li>AMSOIL Signature option: $189</li><li>Up to 5 quarts included</li></ul></article><article class="price-card"><div class="badge">Labor Only</div><p class="price">$69</p><h3>Service Only</h3><p>You provide the oil and filter. We bring the tools and perform the change.</p><ul><li>Mobile labor included</li><li>You choose your products</li><li>Great for supplied specialty oils</li></ul></article></div><p class="fine-print">Additional charges may apply for vehicles requiring more than 5 quarts, trucks, SUVs, luxury vehicles, modified vehicles, specialty filters, skid plate removal, or extended travel. Exact price is confirmed before the appointment.</p></div></section>
     <section class="section" id="included"><div class="container"><div class="section-heading"><h2>What's Included</h2><p>Every appointment is built around clean, convenient service and clear communication before the work begins.</p></div><div class="included-grid"><article class="included-card"><div class="check-icon">✓</div><div><strong>Oil and Filter Change</strong><span>Fresh oil and a new filter matched to your selected package and vehicle needs.</span></div></article><article class="included-card"><div class="check-icon">✓</div><div><strong>Used Oil Disposal</strong><span>Used oil and filter are handled properly so you do not have to deal with the mess.</span></div></article><article class="included-card"><div class="check-icon">✓</div><div><strong>Oil Life Reset</strong><span>Oil life reminder reset is included when available for the vehicle.</span></div></article><article class="included-card"><div class="check-icon">✓</div><div><strong>Clean Work Area</strong><span>Careful setup and cleanup for driveway, workplace, and parking-lot appointments.</span></div></article></div></div></section>
     <section class="section" id="process"><div class="container"><div class="section-heading"><h2>How It Works</h2><p>Fast scheduling, simple communication, and service where the vehicle is already parked.</p></div><div class="steps-grid"><article class="card"><div class="icon">1</div><strong>Send Vehicle Info</strong><span>Text your year, make, model, engine size, and preferred location.</span></article><article class="card"><div class="icon">2</div><strong>Confirm The Price</strong><span>We match the right oil, filter, and package before the appointment.</span></article><article class="card"><div class="icon">3</div><strong>We Come To You</strong><span>Your service is completed at your home, job, or approved parking location.</span></article><article class="card"><div class="icon">4</div><strong>Drive Away Ready</strong><span>Fresh oil, new filter, cleaned work area, and no wasted trip to the shop.</span></article></div></div></section>
