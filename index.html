@@ -13,8 +13,9 @@
     a { color:inherit; }
     .site-header { position:sticky; top:0; z-index:10; background:rgba(16,17,20,.88); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
     .nav,.container,.hero-inner,.footer-inner { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:16px 0; }
-    .brand { display:flex; align-items:center; gap:16px; font-weight:900; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px 0; }
+    .brand { display:flex; align-items:center; gap:14px; font-weight:900; }
+    .brand-mark { width:96px; height:68px; display:block; object-fit:contain; filter:drop-shadow(0 10px 22px rgba(124,58,237,.28)); }
     .brand-name { display:inline-block; font-size:22px; color:var(--text); letter-spacing:0; white-space:nowrap; }
     .nav-links { display:flex; gap:22px; color:var(--muted); font-size:14px; }
     .nav-links a { text-decoration:none; }
@@ -85,17 +86,11 @@
     .footer { padding:30px 0; color:var(--muted); background:#0b0c0f; font-size:14px; }
     .footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
     @media (max-width:920px) { .nav-links { display:none; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.split,.work-gallery { grid-template-columns:1fr 1fr; } .hero:before { width:340px; right:-92px; top:160px; opacity:.34; } }
-    @media (max-width:640px) { .nav,.container,.hero-inner,.footer-inner { width:min(100% - 28px,1120px); } .brand-name { font-size:18px; } .phone-link { min-height:42px; padding:0 13px; font-size:14px; } .hero { min-height:auto; } .hero-inner { padding:82px 0 94px; } .hero-actions { flex-direction:column; align-items:stretch; } .section { padding:58px 0; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.split,.form-grid,.work-gallery { grid-template-columns:1fr; } .price-card { min-height:auto; } .work-photo-card img { height:360px; } }
+    @media (max-width:640px) { .nav,.container,.hero-inner,.footer-inner { width:min(100% - 28px,1120px); } .brand-name { font-size:18px; } .brand-mark { width:72px; height:52px; } .phone-link { min-height:42px; padding:0 13px; font-size:14px; } .hero { min-height:auto; } .hero-inner { padding:82px 0 94px; } .hero-actions { flex-direction:column; align-items:stretch; } .section { padding:58px 0; } .grid-4,.pricing-grid,.steps-grid,.included-grid,.faq-grid,.split,.form-grid,.work-gallery { grid-template-columns:1fr; } .price-card { min-height:auto; } .work-photo-card img { height:360px; } }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <div class="brand"><span class="brand-name">Mobile Oil Man</span></div>
-      <div class="nav-links"><a href="#packages">Packages</a><a href="#process">How It Works</a><a href="#included">Included</a><a href="#work">Photos</a><a href="#book">Book</a><a href="#faq">FAQ</a><a href="#area">Service Area</a></div>
-      <a class="phone-link" href="tel:6066619949">606-661-9949</a>
-    </nav>
-  </header>
+  <header class="site-header"><nav class="nav" aria-label="Main navigation"><div class="brand"><img class="brand-mark" src="assets/mobile-oil-man-logo-transparent.png" alt="Mobile Oil Man logo" /><span class="brand-name">Mobile Oil Man</span></div><div class="nav-links"><a href="#packages">Packages</a><a href="#process">How It Works</a><a href="#included">Included</a><a href="#work">Photos</a><a href="#book">Book</a><a href="#faq">FAQ</a><a href="#area">Service Area</a></div><a class="phone-link" href="tel:6066619949">606-661-9949</a></nav></header>
   <main>
     <section class="hero"><div class="hero-inner"><div class="eyebrow">Danville, KY mobile oil changes</div><h1>We change your oil wherever your day already is.</h1><p>Skip the waiting room. Get professional oil change service at your home or workplace with clear pricing, quality products, and no shop runaround.</p><div class="hero-actions"><a class="button" href="tel:6066619949">Call Now</a><a class="button text-button" href="sms:6066619949?body=Hi%2C%20I%27d%20like%20to%20schedule%20a%20mobile%20oil%20change.%20My%20vehicle%20is%3A%20">Text Now</a><a class="button secondary" href="#book">Book Service</a></div><div class="hero-proof"><span>Home or workplace service</span><span>Full synthetic options</span><span>No unnecessary upsells</span></div></div></section>
     <section class="section"><div class="container"><div class="grid-4"><article class="card"><div class="icon">1</div><strong>Save Time</strong><span>We come to you, so your schedule does not revolve around a shop visit.</span></article><article class="card"><div class="icon">$</div><strong>Honest Pricing</strong><span>Simple packages, clear notes, and pricing confirmed before service.</span></article><article class="card"><div class="icon">O</div><strong>Premium Oils</strong><span>Quality full synthetic options for daily drivers, European, and performance vehicles.</span></article><article class="card"><div class="icon">OK</div><strong>Clean Service</strong><span>Professional setup, careful work, and proper cleanup when the job is done.</span></article></div></div></section>
