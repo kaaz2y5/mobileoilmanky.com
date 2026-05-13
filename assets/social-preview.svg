@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Mobile Oil Man mobile oil changes in Danville, Kentucky">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101114"/>
+      <stop offset=".55" stop-color="#17131f"/>
+      <stop offset="1" stop-color="#2a1949"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="42" y="42" width="1116" height="546" rx="8" fill="none" stroke="#f2c14e" stroke-width="6"/>
+  <rect x="62" y="62" width="1076" height="506" rx="8" fill="none" stroke="#7c3aed" stroke-width="4"/>
+  <text x="92" y="210" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800">Mobile Oil Man</text>
+  <text x="96" y="300" fill="#d7cfdc" font-family="Arial, Helvetica, sans-serif" font-size="34">Mobile oil changes in Danville, KY</text>
+  <text x="96" y="354" fill="#d7cfdc" font-family="Arial, Helvetica, sans-serif" font-size="34">We come to your home or workplace</text>
+  <text x="96" y="456" fill="#f2c14e" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">Call or text 606-661-9949</text>
+  <g transform="translate(820 135)">
+    <path d="M130 0c55 81 100 130 100 197 0 68-48 115-100 115S30 265 30 197C30 130 75 81 130 0Z" fill="#7c3aed"/>
+    <path d="M130 48c34 55 61 90 61 141 0 42-27 71-61 71s-61-29-61-71c0-51 27-86 61-141Z" fill="#f6f3ee"/>
+    <path d="M161 198c-7 32-34 54-70 46 49 34 113 5 113-55 0-15-3-28-9-42-3 28-14 43-34 51Z" fill="#101114" opacity=".45"/>
+  </g>
+</svg>
